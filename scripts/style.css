@@ -1,0 +1,159 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box  ;
+
+}
+body {
+  background: linear-gradient(to right, #ff5e62, #dbc9c1, #ff5e62);
+  height: 100%;
+}
+
+
+fieldset {
+
+  width: 90%;
+  margin-left: 3.5%;
+  margin-top: -50%;
+  align-items: center;
+  height: 90%;
+  position: absolute;
+  backdrop-filter: blur(100%);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+#pic { 
+  position: absolute;
+  width: 25%;
+  margin: 8% 0 0% 24%;
+  border-radius: 5%;
+  box-shadow: 15px 15px 15px #888;
+  transform: scale(1) rotate(-5deg);
+  height: 70%;
+}
+
+audio {
+  margin-top: 39%;
+  margin-left: 25%;
+  background-color: transparent;
+  position: absolute;
+  transform: scale(1) rotate(-5deg);
+}
+
+#caption {
+  position: absolute;
+  margin-top:45%;
+  margin-left: 28%;
+  transform: rotate(-5deg);
+  color: #b01013;
+}
+
+@keyframes fontAnimation {
+  0% {
+    position: absolute;
+      font-size: 15px;
+      color: black;
+      font-weight: normal;
+      width: 400px;
+      margin-left: 48rem;
+      line-height: 1.5;
+  }
+  50% {
+    position: absolute;
+      font-size: 30px;
+      color: rgb(173, 71, 71);
+      font-weight: bold;
+      width: 400px;
+      line-height: 1.5;
+      margin-left: 48rem;
+  }
+  100% {
+    margin-left: 48rem;
+      position: absolute;
+      font-size: 40px;
+      color: rgb(255, 15, 15);
+      font-weight: bolder;
+     width: 400px;
+     line-height: 1.5;
+  }
+}
+
+.toptext {
+  animation: fontAnimation 2s ease-in-out 100;
+  position: absolute;
+  font-size: 50px;
+  color: blue;
+  margin-left: 48rem; 
+  font-weight:bolder;
+  text-align: center;
+  top: 6%;
+  line-height:1.5rem;
+  font-family: "Pacifico", cursive;
+}
+
+#top {
+  margin-left: 9%;
+}
+
+#cake {
+  position: absolute;
+  width: 30%;
+  height: 60%;
+  top: 20%;
+  left: 52%;
+  transition: all 0.5s ease-in-out;
+}
+
+
+span {
+  position: absolute;
+  margin-left: 4.5rem;
+  width: 20%;
+  height: 60%;
+  top: 83%;
+  left: 57.5%;
+}
+
+
+button {
+  border-radius: 20px;
+  padding: 1rem;
+  background-color: lightpink;
+  color: darkred;
+  margin-left: 7%;
+  margin-top: -20%;
+  position: absolute;
+}
+
+button:hover{
+  background-color: pink;
+  color: red;
+  cursor: pointer;
+}
+
+.gift img {
+  height: 200px;
+  width: 200px;
+}
+
+
+
+
+.image-transition {
+  transition: all 0.5s ease-in-out;
+}
+.balloons{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, #ff5e62, #dbc9c1, #ff5e62); 
+}
+.balloons img {
+  width:  100%;
+  height: 100%
+}

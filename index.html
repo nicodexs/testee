@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWA Calculator</title>
+</head>
+<body>
+    <style>
+    body{
+    display: flex;
+    align-items: center;
+    background: #d497c6;
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+
+  h1{
+    margin-left: 0%;
+    margin-top: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .subjects{
+    margin-top: 5%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    max-width: 500px;
+    margin-right: 10%;
+  }
+
+  input {
+    width: 100px;
+    height: 15px;
+    margin-left: auto; /* Adjusted to align input boxes at the right */
+  }
+
+  label {
+    font-size: 20px;
+    display: flex;
+    align-items: center; /* Aligns label and input vertically */
+  }
+
+  button{
+    position: relative;
+    width: 30%;
+    margin-left: 35%;
+  } 
+  fieldset{
+    background-color: rgb(150, 138, 156);
+    margin-top: 10%;
+    border-radius: 20px;
+    border-style:dashed;
+  }
+    </style>
+
+
+    <fieldset>
+      <h1>GWA Calculator</h1>
+       <div class="subjects" > 
+        <label>Math:<input> </label>
+        <label>English: <input required> </label>
+        <label>Science:<input required> </label>
+        <label>Filipino:<input required> </label>
+        <label>Mapeh:<input required> </label>
+        <label>ESP:<input required> </label>
+        <label>TLE:<input required> </label>
+        <button id="playButton" style="margin-top: 5%;">Submit</button>
+       </div>
+    </fieldset>
+
+    <audio id="audio" src="components/Happy birthday (Korean version).mp3" loop="true"></audio>
+
+    <script>
+        // Get references to the button and audio element
+        const playButton = document.getElementById('playButton');
+        const audio = document.getElementById('audio');
+
+        // Add event listener to the button
+        playButton.addEventListener('click', function() {
+            // Check if audio is paused or not
+            if (audio.paused) {
+                // If paused, play the audio
+                audio.play();
+            } else {
+                // If playing, pause the audio
+                audio.pause();
+            }
+        });
+
+        // Add event listener to handle page navigation while music is playing
+        playButton.addEventListener('click', function(event) {
+            // Check if audio is playing
+            if (!audio.paused) {
+                // Prevent the default action of the button (which would pause/resume the music)
+                event.preventDefault();
+                // Open main.html in a new tab/window
+                window.open('scripts/main.html', '_blank');
+            }
+        });
+    </script>
+</body>
+</html>
